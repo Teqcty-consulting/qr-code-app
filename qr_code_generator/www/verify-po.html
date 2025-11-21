@@ -1,0 +1,25 @@
+<!-- <head>
+  <script src="/react-frappe/apps/frappe/frappe/public/js/lib/jquery/jquery.min.js"></script>
+  <script src="/react-frappe/apps/frappe/frappe/public/js/frappe-web.bundle.js"></script>
+</head> -->
+
+
+{% if frappe.session.user == "Guest" %}
+  <script>
+    window.location.href = "/login?redirect-to=/verify-po?po={{ frappe.form_dict.po }}";
+  </script>
+{% else %}
+  <h2>Purchase Order: {{ frappe.form_dict.po }}</h2>
+
+
+<pre id="po-data">Loading...</pre>
+<script>
+  const po = "PUR-ORD-2025-00001";
+  fetch(`/api/method/qr_code_generator.api.purchase_order.get_po_items?po_name=${po}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("po-data").innerText = JSON.stringify(data.message, null, 2);
+    });
+</script>
+
+{% endif %}
