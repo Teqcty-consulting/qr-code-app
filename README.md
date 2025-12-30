@@ -33,3 +33,4 @@ Pre-commit is configured to use the following tools for checking and formatting 
 agpl-3.0
 # qr-code-app
 # Qr-Code
+# qr-code
