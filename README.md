@@ -34,3 +34,4 @@ agpl-3.0
 # qr-code-app
 # Qr-Code
 # qr-code
+# qr-code
