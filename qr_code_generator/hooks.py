@@ -242,3 +242,11 @@ app_license = "agpl-3.0"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+
+
+
+# app_include_js = [
+#     "/assets/qr_code_generator/js/purchase_order.js"
+# ]
+
